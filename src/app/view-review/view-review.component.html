@@ -1,0 +1,12 @@
+<h1>{{ selectedReview.movieName }}</h1>
+<img
+  src="assets/images/{{ selectedReview.imageUrl }}"
+  alt="movie"
+  height="40%"
+  width="30%"
+/>
+<p>{{ selectedReview.movieReview }}</p>
+
+<button type="button" [routerLink]="['/']" class="btn btn-primary">
+  Back to Home
+</button>

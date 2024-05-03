@@ -1,0 +1,50 @@
+<form [formGroup]="form">
+  <h3>Movie Review Form</h3>
+  <div class="mb-3">
+    <label for="moviename">MovieName:</label>
+    <input
+      type="text"
+      formControlName="movieName"
+      id="moviename"
+      placeholder="movie name"
+    />
+  </div>
+  <div class="md-3">
+    <label for="castandcrew">CastAndCrew:</label>
+    <textarea
+      formControlName="castAndCrew"
+      id="CastAndCrew"
+      rows="2"
+    ></textarea>
+    <div class="mb-3">
+      <label for="MovieReview">MovieReview:</label>
+      <textarea
+        formControlName="movieReview"
+        id="MovieReview"
+        rows="3"
+      ></textarea>
+    </div>
+    <div>
+      <label for="imageUrl" class="form-label">Upload Image</label>
+      <input
+        type="file"
+        accept="images*/"
+        class="form-control"
+        (change)="onFileSelected($event)"
+        formControlName="imageUrl"
+        id="imageUrl"
+        #fileInput
+      />
+    </div>
+    <div class="col-auto">
+      <button
+        type="submit"
+        class="btn btn-primary mb-3"
+        [disabled]="form.invalid"
+        (click)="onSubmit()"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</form>

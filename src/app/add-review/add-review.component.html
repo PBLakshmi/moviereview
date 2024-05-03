@@ -1,0 +1,23 @@
+<form [formGroup]="form">
+    <h2>Movie Review Form</h2>
+    <div>
+        <div class="mb-3">
+            <label for="moviename">MovieName:</label>
+            <input type="text" formControlName="movieName" id="moviename" placeholder="Movies">
+        </div>
+        <div class="mb-3">
+            <label for="castandcrew">CastAndCrew:</label>
+            <textarea formControlName="castAndCrew" id="CastAndCrew" rows="2" placeholder="castandcrew"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="moviereview">MovieReview:</label>
+            <textarea formControlName="movieReview" id="MovieReview" rows="3" placeholder="moviereview"></textarea>
+        </div>
+        <div>
+            <label for="imageUrl" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" formControlName="imageUrl" id="imageUrl" #fileInput>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3" (click)="onSubmit()">Add</button>
+    </div>
+    
+</form>
